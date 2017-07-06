@@ -32,7 +32,7 @@ class List extends Component {
             mm = '0'+mm
         } 
 
-        today = mm + '/' + dd + '/' + yyyy;
+        today = yyyy + '-' + mm + '-' + dd;
         this.state = {
             pageNumber: 1,
             pageSize: 40,
@@ -155,13 +155,15 @@ class List extends Component {
                     />
                     </View>
                 </View>
-                <ScrollView style={{padding:10, borderWidth:1, margin:10}}>
-                    {
-                        this.state.data.map((item, index) => {
-                            return <Text key={index}> {item.Title}</Text>
-                        })
-                    }
-                </ScrollView>
+                <Card>
+                    <ScrollView style={{padding:10}}>
+                        {
+                            this.state.data.map((item, index) => {
+                                return <Text key={index}> {item.Title}</Text>
+                            })
+                        }
+                    </ScrollView>
+                </Card>
                 <View style={{flexDirection:'row', padding:10, justifyContent:'space-around', alignItems:'center'}}>
                     <TouchableOpacity onPress={(e)=>this.onPagenation(0)}>
                         <Icon name="arrow-back"/>
