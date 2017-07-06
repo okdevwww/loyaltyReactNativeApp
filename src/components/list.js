@@ -101,7 +101,7 @@ class List extends Component {
                 
                 <Header>
                     <Body>
-                        <Title>List Container</Title>
+                        <Title>App for testing API connection</Title>
                     </Body>
                 </Header>
                 <View style={{flexDirection:'row', width:'100%', justifyContent:'center', alignItems:'center', padding:10}}>
