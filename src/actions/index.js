@@ -6,7 +6,7 @@ export const getData = (data) =>{
   return dispatch => {
 		query(url, "GET", {})
 		.then(res => {
-			dispatch({ type: 'REQUESTED_FETCH_SUCCEEDED', listData: res.Rewards });
+			dispatch({ type: 'REQUESTED_FETCH_SUCCEEDED', listData: {data:res.Rewards,status:true}});
 		})
 		.catch(error => {
 			dispatch({ type: 'REQUESTED_FETCH_REJECTED' })
